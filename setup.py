@@ -11,7 +11,7 @@
 from setuptools import setup, find_packages
 from pure_dispatch import __version__
 
-tests_require = [
+TESTS_REQUIRE = [
     'mock',
     'nose',
     'coverage',
@@ -21,6 +21,7 @@ tests_require = [
     'ipdb',
     'coveralls',
     'sphinx',
+    'pylint'
 ]
 
 setup(
@@ -51,7 +52,7 @@ an incredible python package
         'sqlalchemy',
     ],
     extras_require={
-        'tests': tests_require,
+        'tests': TESTS_REQUIRE,
     },
     entry_points={
         'console_scripts': [
