@@ -4,8 +4,9 @@
 class SingletonMetaClass(type):
     '''Generic singleton metaclass.
     '''
-    def __init__(cls, name, bases, _dict):
-        '''Initializer method.
+    def __init__(cls, name, bases, _dict):  # pragma: no cover
+        '''Initializer method, no practical way to test this as of yet.
+        So using a coverage pragma to hide it.
         '''
         super(SingletonMetaClass, cls).__init__(name, bases, dict)
         original_new = cls.__new__

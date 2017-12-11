@@ -10,9 +10,6 @@ class DatabaseEngine(SingletonBaseClass):
     def __init__(self):
         self.instance = create_database_engine()
 
-    def __call__(self):
-        return self.instance
-
 class DatabaseSession(SingletonBaseClass):
     '''Singleton to wrap our database session.
     '''
